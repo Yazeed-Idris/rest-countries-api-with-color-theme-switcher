@@ -1,9 +1,12 @@
+import {Fragment} from 'react'
+import {Header} from "./components/Header";
 function App() {
 
   return (
-    <div className="App ">
-     <h1 className='dark:text-red-600 font-Nunito-Sans font-[800] text-4xl'>Hello World!</h1>
-    </div>
+    <Fragment>
+        <Header />
+     <h1 className='dark:text-red-600   '>Hello World!</h1>
+    </Fragment>
   )
 }
 
