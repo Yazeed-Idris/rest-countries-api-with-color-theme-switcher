@@ -1,11 +1,8 @@
-import { useState } from 'react'
-
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App ">
-     <h1 className='dark:text-red-600 text-4xl'>Hello World!</h1>
+     <h1 className='dark:text-red-600 font-Nunito-Sans font-[800] text-4xl'>Hello World!</h1>
     </div>
   )
 }
