@@ -5,7 +5,9 @@ function App() {
   return (
     <Fragment>
         <Header />
-     <h1 className='dark:text-red-600   '>Hello World!</h1>
+        <main className='dark:bg-Very-Dark-Blue-bgDark transition-colors duration-300'>
+
+        </main>
     </Fragment>
   )
 }

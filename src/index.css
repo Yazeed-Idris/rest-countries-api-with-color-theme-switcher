@@ -6,3 +6,20 @@
 * {
     font-family: 'Nunito Sans', sans-serif;
 }
+
+html {
+    height: 100vh;
+}
+
+#root, body {
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+#root main {
+    flex-grow: 1;
+}
