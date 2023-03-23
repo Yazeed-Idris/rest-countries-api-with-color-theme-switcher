@@ -30,7 +30,7 @@ export const RegionFilterList = () => {
     return <Fragment>
         <div>
             <button onClick={handleDropdownClick} className='flex w-48 justify-between px-6 py-4 items-center shadow-[0_0_5px_1px_rgba(0,0,0,0.3)] rounded-lg text-Very-Dark-Blue-light-text bg-White dark:text-White dark:bg-Dark-Blue-dark'>{buttonText}
-                <FontAwesomeIcon className='w-2 h-3 object-contain scale-x-[1.8] ml-7' icon={faV} />
+                <FontAwesomeIcon className={`w-2 h-3 object-contain scale-x-[1.8] ml-7 ${showList? 'scale-[-1]': ''} transition-all duration-100`} icon={faV} />
             </button>
             <div className='relative w-full h-0'>
                 <div className={`absolute w-full shadow-[0_0_5px_1px_rgba(0,0,0,0.3)] mt-2 rounded-lg text-Very-Dark-Blue bg-White dark:text-White dark:bg-Dark-Blue-dark transition-all duration-100 origin-top ${showList? 'scale-100' : 'scale-0'}`}>
