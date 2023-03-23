@@ -6,7 +6,6 @@ function App() {
     <Fragment>
         <Header />
         <main className='dark:bg-Very-Dark-Blue-bgDark bg-Very-Light-Gray-bgLight transition-colors duration-300 grid place-items-center'>
-
         </main>
     </Fragment>
   )
