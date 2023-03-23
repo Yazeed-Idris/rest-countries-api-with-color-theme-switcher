@@ -7,7 +7,7 @@ export const BackButton = () => {
     function handleClick() {
 
     }
-    return <button className='active:translate-y-1 transition-all duration-100 rounded shadow-[0_0_5px_1px_rgba(0,0,0,0.3)] flex justify-center items-center px-7 py-2 font-[600] bg-Very-Light-Gray-bgLight text-Very-Dark-Blue-light-text dark:bg-Dark-Blue-dark dark:text-White'>
+    return <button className='active:translate-y-1 transition-all duration-100 rounded shadow-[0_0_5px_1px_rgba(0,0,0,0.3)] flex justify-center items-center px-7 py-2 font-[600] bg-White text-Very-Dark-Blue-light-text dark:bg-Dark-Blue-dark dark:text-White'>
         <FontAwesomeIcon className='object-fill w-4 h-4 scale-x-125 duration-300' icon={faArrowLeft} />
         <span className='ml-3 duration-300'>
         Back
