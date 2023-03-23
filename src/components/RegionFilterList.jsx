@@ -33,7 +33,7 @@ export const RegionFilterList = () => {
                 <FontAwesomeIcon className={`w-2 h-3 object-contain scale-x-[1.8] ml-7 ${showList? 'scale-[-1]': ''} transition-all duration-100`} icon={faV} />
             </button>
             <div className='relative w-full h-0'>
-                <div className={`absolute w-full shadow-[0_0_5px_1px_rgba(0,0,0,0.3)] mt-2 rounded-lg text-Very-Dark-Blue bg-White dark:text-White dark:bg-Dark-Blue-dark transition-all duration-100 origin-top ${showList? 'scale-100' : 'scale-0'}`}>
+                <div className={`absolute py-3 w-full shadow-[0_0_5px_1px_rgba(0,0,0,0.3)] mt-2 rounded-lg text-Very-Dark-Blue bg-White dark:text-White dark:bg-Dark-Blue-dark transition-all duration-100 origin-top ${showList? 'scale-100' : 'scale-0'}`}>
                     {regions.map((el, index) => {
                         return <p onClick={() => {handleOptionClick(el)}} className={`mt-1 mb-1 px-6 cursor-pointer hover:bg-black hover:bg-opacity-5 dark:hover:bg-White dark:hover:bg-opacity-5 `} key={index}>{el}</p>
                     })}
