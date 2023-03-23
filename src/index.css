@@ -23,3 +23,9 @@ html {
 #root main {
     flex-grow: 1;
 }
+
+@layer base {
+    .yazz {
+
+    }
+}

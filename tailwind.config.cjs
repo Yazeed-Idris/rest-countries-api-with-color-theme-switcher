@@ -19,5 +19,8 @@ module.exports = {
         }
     },
   },
+    variants: {
+        backgroundColor: ['yazz']
+    },
   plugins: [],
 }

@@ -31,7 +31,7 @@ export const Header = () => {
         setDarkMode(!darkMode);
     }
 
-    return (<header className='flex justify-between items-center px-20 py-7 w-full shadow-lg bg-White dark:bg-Dark-Blue-dark transition-colors duration-300'>
+    return (<header className='flex justify-between items-center px-20 py-7 w-full text-Very-Dark-Blue-light-text shadow-lg bg-Very-Light-Gray-bgLight dark:bg-Dark-Blue-dark transition-colors duration-300'>
         <h2 className='text-2xl font-[800] dark:text-White  duration-500'>Where in the world?</h2>
         <div onClick={handleSetDarkMode} className='flex items-center cursor-pointer'>
             <FontAwesomeIcon  className='object-fill w-5 h-6  dark:text-White select-none transition-all duration-500' icon={darkMode? faMoonSolid : faMoonRegular} />
