@@ -1,12 +1,7 @@
+import {extractShortCountryInfo} from "../country-data.service.js";
+
 export const CountryCard = ({country}) => {
-    const capitals = country['capital'] ?? [];
-    const imageUrl = country['flags']['svg'] ?? (country['flags']['png'] ?? '');
-    const population = country['population'] ?? 0;
-    const region = country['region'];
-    const countryName = country['name']['official'] ?? (country['name']['common'] ?? 'unknown')
-    if (capitals.length > 1) {
-        console.log(countryName)
-    }
+    const [capitals, imageUrl, population, region, countryName] = extractShortCountryInfo(country)
 
     const numberFormatter = Intl.NumberFormat('en-US');
     return <div className='rounded-md shadow-xl font-Nunito-Sans text-Dark-Blue-dark dark:text-White transition-all duration-300'>
