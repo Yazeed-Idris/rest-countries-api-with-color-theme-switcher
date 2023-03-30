@@ -20,7 +20,7 @@ export const CountryCard = ({country, index}) => {
             <img className='rounded-t-md w-full h-full object-cover' src={imageUrl} alt={`${countryName} flag`}/>
         </div>
         <h2 className='text-xl font-[600] mt-6 mb-4 ml-6'>{countryName}</h2>
-        <div className='mt-0 ml-6 text-sm  h-full'>
+        <div className='mt-0 ml-6 text-sm  '>
             <p className='font-[300] my-1'><strong className='font-[600]'>Population:</strong> {numberFormatter.format(population)}</p>
             <p className='font-[300] my-1'><strong className='font-[600]'>Region:</strong> {region}</p>
             <p className='font-[300] my-1'><strong className='font-[600]'>Capital:</strong> {capitals.reduce((text, capital, currentIndex) => text + `${capital}${currentIndex !== capitals.length - 1 ? ', ' : ''}`, '')}</p>
