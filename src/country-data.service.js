@@ -14,13 +14,13 @@ const useCountriesData = () => {
     return countriesData;
 }
 
-function shortenCountryName(countryName) {
-    const MAX_COUNTRY_NAME_LENGTH = 22;
+export function shortenCountryName(countryName) {
+    const MAX_COUNTRY_NAME_LENGTH = 19;
     return countryName.length > MAX_COUNTRY_NAME_LENGTH ? countryName.slice(0, MAX_COUNTRY_NAME_LENGTH) + '...' : countryName;
 }
 
 export function extractShortCountryInfo(country) {
-    const capitals = country['capital'] ?? [];
+    const capitals = country['capital'] ?? ['unknown'];
     const imageUrl = country['flags']['svg'] ?? (country['flags']['png'] ?? '');
     const population = country['population'] ?? 0;
     const region = country['region'];
