@@ -43,7 +43,7 @@ export const CountryCardsContainer = ({countries, sliceSize = 8, rowsNumber = 2}
             {row.map((countryCard, jIndex) => {
                     if (countryCard === undefined) return <Fragment></Fragment>
                     return <CountryCard key={index * (sliceSize / rowsNumber) + jIndex} country={countryCard}
-                                        index={index * (sliceSize / rowsNumber) + jIndex}/>
+                                        index={countryCard.countryIndex}/>
                 }
             )}
         </div>
