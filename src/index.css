@@ -15,6 +15,14 @@ html {
     height: 100%;
 }
 
+html.dark body {
+    background-color: hsl(207, 26%, 17%);
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+}
+
 #root {
     display: flex;
     flex-direction: column;
@@ -24,8 +32,33 @@ html {
     flex-grow: 1;
 }
 
-@layer base {
-    .yazz {
 
+.fadeIn {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeOut {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
     }
 }
