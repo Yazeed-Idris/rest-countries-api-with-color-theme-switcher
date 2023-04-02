@@ -8,7 +8,12 @@ const useCountriesData = () => {
         fetch("https://restcountries.com/v3.1/all")
             .then((response) => response.json())
             .then((countriesData) => {
-                setCountriesData(countriesData);
+                setCountriesData(countriesData.map((country, index) => {
+                   return {
+                       ...country,
+                       countryIndex: index
+                   }
+                }));
             });
     }, [])
     return countriesData;

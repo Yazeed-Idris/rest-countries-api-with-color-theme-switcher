@@ -3,8 +3,6 @@ import {useEffect, useState} from "react";
 
 export const CountryCard = ({country, index}) => {
 
-    console.log('country:', country)
-
     const [capitals, imageUrl, population, region, countryName] = extractShortCountryInfo(country)
     const [showElement, setShowElement] = useState(false);
 

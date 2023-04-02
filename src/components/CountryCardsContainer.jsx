@@ -39,7 +39,6 @@ export const CountryCardsContainer = ({countries, sliceSize = 8, rowsNumber = 2}
     }
 
     const displayedCountriesComponents = displayedCountriesComponentsArr.map((row, index) => {
-        console.log('row:', row)
         return <div key={`${index}${row}`} className='xl:flex xl:justify-between w-full xl:mt-5'>
             {row.map((countryCard, jIndex) => {
                     if (countryCard === undefined) return <Fragment></Fragment>

@@ -1,6 +1,7 @@
 import {extractFullCountryInfo} from "../country-data.service.js";
 
 export const CountryInfo = ({country}) => {
+    if (!country) return <div>Loading...</div>
     const numberFormatter = Intl.NumberFormat('en-US');
     const [capitals, imageUrl, population, region, countryName, nativeName, subRegion, topLevelDomain, currencies, languages, borderCountries] = extractFullCountryInfo(country)
 
