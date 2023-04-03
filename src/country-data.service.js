@@ -34,9 +34,20 @@ export function extractShortCountryInfo(country) {
     return [capitals, imageUrl, population, region, countryName]
 }
 
+export function getCountryBorders(country, countriesData) {
+    const countryBorders = country['borders'] ?? [];
+    const borderCountries = [];
+    for (const countryBorder of countryBorders) {
+        const countryBorderName = countriesData.find(country => country['cca3'] === countryBorder);
+        borderCountries.push(countryBorderName);
+    }
+    return borderCountries;
+}
+
 export function extractFullCountryInfo(country) {
     const NATIVE_NAME_COUNTER_LIMIT = 3;
-    const [capitals, imageUrl, population, region, countryName] = extractShortCountryInfo(country);
+    const [capitals, imageUrl, population, region, _] = extractShortCountryInfo(country);
+    const countryName = country['name']['common']  ?? 'unknown';
     let nativeName = ''
     let counter = 0;
     for (const nativeNameKey in country['name']['nativeName']) {
@@ -71,7 +82,6 @@ export function extractFullCountryInfo(country) {
     }
     languages = languages.slice(0, -2);
 
-    const borderCountries = [];
-    return [capitals, imageUrl, population, region, countryName, nativeName, subRegion, topLevelDomain, currencies, languages, borderCountries]
+    return [capitals, imageUrl, population, region, countryName, nativeName, subRegion, topLevelDomain, currencies, languages]
 }
 export default useCountriesData;

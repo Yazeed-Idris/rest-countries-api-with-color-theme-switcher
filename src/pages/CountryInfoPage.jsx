@@ -10,6 +10,6 @@ export default function CountryInfoPage({countriesData}) {
         <div className='xl:flex justify-start items-center w-full my-20'>
             <BackButton />
         </div>
-        <CountryInfo country={countriesData[index]}/>
+        <CountryInfo country={countriesData[index]} countriesData={countriesData}/>
     </div>
 }
