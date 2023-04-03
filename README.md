@@ -33,12 +33,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/desktop-dark-info.png)
-![](./screenshots/desktop-dark-main.png)
-![](./screenshots/mobile-dark-info.png)
-![](./screenshots/mobile-dark-main.png)
-![](./screenshots/desktop-light-main-filter.png)
-![](./screenshots/desktop-light-info.png)
+![](src/screenshots/desktop-dark-info.png)
+![](src/screenshots/desktop-dark-main.png)
+![](src/screenshots/mobile-dark-info.png)
+![](src/screenshots/mobile-dark-main.png)
+![](src/screenshots/desktop-light-main-filter.png)
+![](src/screenshots/desktop-light-info.png)
 
 ### Links
 
