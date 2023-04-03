@@ -10,19 +10,19 @@ export const CountryInfo = ({country, countriesData}) => {
     const navigate = useNavigate();
 
     return <section className='xl:flex justify-start items-center w-full font-Nunito-Sans text-Dark-Blue-dark dark:text-White transition-all duration-300'>
-        <img className='w-[39rem] h-[26rem] object-cover' src={imageUrl} alt={`${countryName} flag`}/>
+        <img className='xl:w-[39rem] xl:h-[26rem] w-full aspect-[3/2] object-cover' src={imageUrl} alt={`${countryName} flag`}/>
         <div className='mr-0 xl:ml-24'>
-            <h1>{countryName}</h1>
+            <h1 className='text-3xl font-[800] my-12 xl:my-4'>{countryName}</h1>
             <section id='information-section' className=''>
                 <div className='xl:flex'>
-                   <div>
+                   <div className='my-6 xl:my-0'>
                           <p className='font-[300] my-1'><strong className='font-[600]'>Native Name:</strong> {nativeName}</p>
                        <p className='font-[300] my-1'><strong className='font-[600]'>Population:</strong> {numberFormatter.format(population)}</p>
                        <p className='font-[300] my-1'><strong className='font-[600]'>Region:</strong> {region}</p>
                           <p className='font-[300] my-1'><strong className='font-[600]'>Sub Region:</strong> {subRegion}</p>
                        <p className='font-[300] my-1'><strong className='font-[600]'>Capital:</strong> {capitals.reduce((text, capital, currentIndex) => text + `${capital}${currentIndex !== capitals.length - 1 ? ', ' : ''}`, '')}</p>
                    </div>
-                    <div className='xl:ml-24'>
+                    <div className='xl:ml-24 xl:my-0 my-6'>
                         <p className='font-[300] my-1'><strong className='font-[600]'>Top Level Domain:</strong> {topLevelDomain}</p>
                         <p className='font-[300] my-1'><strong className='font-[600]'>Currencies:</strong> {currencies}</p>
                         <p className='font-[300] my-1'><strong className='font-[600]'>Languages:</strong> {languages}</p>
