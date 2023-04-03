@@ -29,11 +29,11 @@ export const CountryInfo = ({country, countriesData}) => {
                     </div>
                 </div>
             </section>
-            <section id='border-countries-section' className='xl:flex justify-start items-center'>
+            <section id='border-countries-section' className='xl:flex justify-start items-center flex-wrap'>
                 <h2 className='font-[600] my-1'>Border Countries:</h2>
-                <div className='flex justify-between items-center grow xl:ml-2'>
-                    {borderCountries.map((country, index) => {
-                        return <button onClick={() => navigate(`/country/${country.countryIndex}`)} key={country.countryIndex} className={`font-[300] grow ${index === 0? 'mr-2' : index === borderCountries.length - 1? 'ml-2' : 'mx-2'} active:scale-105 dark:active:scale-105 disabled:hover:scale-100 dark:hover:scale-100 disabled:opacity-50 dark:disabled:opacity-50 transition-all duration-100 rounded shadow-[0_0_5px_1px_rgba(0,0,0,0.3)] flex justify-center items-center p-2 font-[600] bg-White text-Very-Dark-Blue-light-text dark:bg-Dark-Blue-dark dark:text-White`}>{country['name']['common']  ?? 'unknown'}</button>
+                <div className='flex justify-between items-center xl:ml-2 p-0 flex-wrap xl:flex-nowrap'>
+                    {borderCountries.map((country) => {
+                        return <button onClick={() => navigate(`/country/${country.countryIndex}`)} key={country.countryIndex} className={`font-[300] grow m-2 active:scale-105 dark:active:scale-105 disabled:hover:scale-100 dark:hover:scale-100 disabled:opacity-50 dark:disabled:opacity-50 transition-all duration-100 rounded shadow-[0_0_5px_1px_rgba(0,0,0,0.3)] flex justify-center items-center p-2 font-[600] bg-White text-Very-Dark-Blue-light-text dark:bg-Dark-Blue-dark dark:text-White`}>{country['name']['common']  ?? 'unknown'}</button>
                     })}
                 </div>
 
