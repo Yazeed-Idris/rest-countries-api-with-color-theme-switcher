@@ -25,7 +25,7 @@ function App() {
         <Fragment>
             <Header/>
             <main
-                className={`dark:bg-Very-Dark-Blue-bgDark bg-Very-Light-Gray-bgLight transition-colors duration-300 px-10 sm:px-20 grid place-items-center xl:overflow-hidden`}>
+                className={`dark:bg-Very-Dark-Blue-bgDark bg-Very-Light-Gray-bgLight transition-colors duration-300 px-10 sm:px-20 grid place-items-center overflow-x-hidden xl:overflow-hidden`}>
                 <div onAnimationEnd={() => {
                     if (transitionStage === 'fadeOut') {
                         setDisplayLocation(location);

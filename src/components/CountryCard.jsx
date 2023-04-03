@@ -16,7 +16,7 @@ export const CountryCard = ({country, index}) => {
 
     const numberFormatter = Intl.NumberFormat('en-US');
     return <div onClick={() => {navigate(`/country/${index}`)}}
-            className={`${showElement ? 'opacity-100' : 'opacity-0'} mx-auto mb-5 xl:mx-0 bg-White dark:bg-Dark-Blue-dark w-60 pb-6 rounded-md shadow-xl font-Nunito-Sans text-Dark-Blue-dark dark:text-White transition-all duration-300`}>
+            className={`${showElement ? 'opacity-100' : 'opacity-0'} hover:scale-105 hover:cursor-pointer mx-auto mb-5 xl:mx-0 bg-White dark:bg-Dark-Blue-dark w-60 pb-6 rounded-md shadow-xl font-Nunito-Sans text-Dark-Blue-dark dark:text-White transition-all duration-300`}>
             <div className='w-60 h-40 mb-4'>
                 <img className='rounded-t-md w-full h-full object-cover' src={imageUrl} alt={`${countryName} flag`}/>
             </div>
