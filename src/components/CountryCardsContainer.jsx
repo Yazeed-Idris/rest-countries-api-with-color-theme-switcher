@@ -50,7 +50,7 @@ export const CountryCardsContainer = ({countries, sliceSize = 8, rowsNumber = 2}
     })
     return (
         <Fragment>
-            <div className='w-full h-full flex flex-col xl:flex-row justify-between items-center'>
+            <div className='w-full h-full flex flex-col xl:flex-row justify-between items-center z-10'>
                 <button disabled={previousButtonDisabled} onClick={handlePreviousClick}
                         className='active:scale-105 dark:active:scale-105 disabled:hover:scale-100 dark:hover:scale-100 disabled:opacity-50 dark:disabled:opacity-50 transition-all duration-100 rounded shadow-[0_0_5px_1px_rgba(0,0,0,0.3)] flex justify-center items-center p-2 font-[600] bg-White text-Very-Dark-Blue-light-text dark:bg-Dark-Blue-dark dark:text-White xl:mr-6 mb-5 rotate-90 xl:rotate-0 '>
                     <FontAwesomeIcon icon={faArrowLeft}/></button>
