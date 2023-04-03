@@ -95,7 +95,7 @@ loading the rows below each other
 
 - [Stack Overflow](https://stackoverflow.com/) - This site is the first place I look for answers about a problem I'm
   facing.
-- [React Dev](https://react.dev/) - The React dev site was very helpful in my learning experience with react
+- [React Dev](https://react.dev/) - The React dev site was very helpful in my learning experience with react.
 
 ## Author
 
