@@ -2,7 +2,7 @@ import {extractShortCountryInfo, shortenCountryName} from "../country-data.servi
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 
-export const CountryCard = ({country, index}) => {
+export const CountryCard = ({country, countryIndex, index = 0}) => {
 
     const [capitals, imageUrl, population, region, countryName] = extractShortCountryInfo(country)
     const [showElement, setShowElement] = useState(false);
@@ -12,10 +12,10 @@ export const CountryCard = ({country, index}) => {
         const timeout = setTimeout(() => setShowElement(true), 100 * index)
         return () => clearTimeout(timeout)
     }
-    , [index])
+    , [countryIndex])
 
     const numberFormatter = Intl.NumberFormat('en-US');
-    return <div onClick={() => {navigate(`/country/${index}`)}}
+    return <div onClick={() => {navigate(`/country/${countryIndex}`)}}
             className={`${showElement ? 'opacity-100' : 'opacity-0'} hover:scale-105 hover:cursor-pointer mx-auto mb-5 xl:mx-0 bg-White dark:bg-Dark-Blue-dark w-60 pb-6 rounded-md shadow-xl font-Nunito-Sans text-Dark-Blue-dark dark:text-White transition-all duration-300`}>
             <div className='w-60 h-40 mb-4'>
                 <img className='rounded-t-md w-full h-full object-cover' src={imageUrl} alt={`${countryName} flag`}/>

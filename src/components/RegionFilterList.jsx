@@ -2,17 +2,19 @@ import {Fragment, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faV} from "@fortawesome/free-solid-svg-icons";
 
-export const RegionFilterList = () => {
+export const RegionFilterList = ({setFilterOption}) => {
 
     const [buttonText, setButtonText] = useState('Filter by region');
     const [showList, setShowList] = useState(false);
     const regions = [
         'Africa',
-        'America',
+        'Americas',
         'Asia',
         'Europe',
         'Oceania',
     ]
+
+
 
     function handleDropdownClick() {
         setShowList(!showList);
@@ -22,9 +24,11 @@ export const RegionFilterList = () => {
         setShowList(false);
         if (!(regions.includes(regionName))) {
             setButtonText('Filter by region');
+            setFilterOption('Clear');
             return;
         }
         setButtonText(regionName);
+        setFilterOption(regionName);
     }
 
     return <Fragment>
@@ -37,7 +41,7 @@ export const RegionFilterList = () => {
                     {regions.map((el, index) => {
                         return <p onClick={() => {handleOptionClick(el)}} className={`mt-1 mb-1 px-6 cursor-pointer hover:bg-black hover:bg-opacity-5 dark:hover:bg-White dark:hover:bg-opacity-5 `} key={index}>{el}</p>
                     })}
-                    <p onClick={() => handleOptionClick('clear')} className={`mt-1 mb-1 px-6 cursor-pointer hover:bg-black hover:bg-opacity-5 dark:hover:bg-White dark:hover:bg-opacity-5 `}>Clear</p>
+                    <p onClick={() => handleOptionClick('Clear')} className={`mt-1 mb-1 px-6 cursor-pointer hover:bg-black hover:bg-opacity-5 dark:hover:bg-White dark:hover:bg-opacity-5 `}>Clear</p>
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import {faArrowLeft, faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export const CountryCardsContainer = ({countries, sliceSize = 8, rowsNumber = 2}) => {
+    if (countries.length === 0) return <Fragment></Fragment>
     const SLICE_SIZE = countries.length > sliceSize ? sliceSize : countries.length;
     const [displayedStartIndex, setDisplayedStartIndex] = useState(0);
     const [nextButtonDisabled, setNextButtonDisabled] = useState(false);
@@ -43,7 +44,7 @@ export const CountryCardsContainer = ({countries, sliceSize = 8, rowsNumber = 2}
             {row.map((countryCard, jIndex) => {
                     if (countryCard === undefined) return <Fragment></Fragment>
                     return <CountryCard key={index * (sliceSize / rowsNumber) + jIndex} country={countryCard}
-                                        index={countryCard.countryIndex}/>
+                                        countryIndex={countryCard.countryIndex} index={(index + jIndex)}/>
                 }
             )}
         </div>
